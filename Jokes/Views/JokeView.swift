@@ -10,10 +10,12 @@ import SwiftUI
 struct JokeView: View {
     @State var punchlineOpacity = 0.0
     
+    @State var currentJokes = example_joke
+    
     var body: some View {
         NavigationView{
             VStack{
-                Text("You see, Mountains are not funny")
+                Text(currentJokes.setup)
                     .font(.title)
                     .multilineTextAlignment(.center)
                 
@@ -29,7 +31,7 @@ struct JokeView: View {
                         .tint(.black)
                 })
                 
-                Text("They are hill areas")
+                Text(currentJokes.punchline)
                     .font(.title)
                     .multilineTextAlignment(.center)
                     .opacity(punchlineOpacity)
