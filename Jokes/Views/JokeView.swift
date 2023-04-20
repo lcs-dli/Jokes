@@ -14,6 +14,16 @@ struct JokeView: View {
                 Text("You see, Mountains are not funny")
                     .font(.title)
                     .multilineTextAlignment(.center)
+                
+                Button(action: {
+                    
+                }, label: {
+                    Image(systemName: "arrow.down.circle.fill")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 40)
+                        .tint(.black)
+                })
             }
         }
         .navigationTitle("Random Jokes")
