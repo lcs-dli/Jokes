@@ -9,12 +9,22 @@ import SwiftUI
 
 struct JokeView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView{
+            VStack{
+                Text("You see, Mountains are not funny")
+                    .font(.title)
+                    .multilineTextAlignment(.center)
+            }
+        }
+        .navigationTitle("Random Jokes")
+       
     }
 }
 
 struct JokeView_Previews: PreviewProvider {
     static var previews: some View {
-        JokeView()
+        NavigationView{
+            JokeView()
+        }
     }
 }
